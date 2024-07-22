@@ -10,7 +10,7 @@ RUN apk -U upgrade \
 
 COPY --from=ghcr.io/blue-oci/hardened_malloc:latest /install /usr/local/lib/
 
-RUN rm /usr/local/bin/gosu /usr/local/bin/su-exec
+RUN rm /usr/local/bin/gosu
 
 USER redis
 
