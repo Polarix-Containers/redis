@@ -7,6 +7,22 @@
 - Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID:GID is 991:1000.
 - Removes unnecessary gosu SUID binary.
 
+### Sample Docker Compose config
+
+```
+  redis:
+    image: ghcr.io/polarix-containers/redis:7
+    restart: unless-stopped
+    volumes:
+      - ./redis:/data:Z
+    user: "991:1000"
+    read_only: true
+    security_opt:
+      - "no-new-privileges=true"
+    cap_drop:
+      - ALL
+```
+
 ### Licensing
 - The code in this repository is licensed under the Apache License. 😇
 - The image is built on `docker.io/redis`, which is under the BSD license. Copyright to the base image belongs to Docker Inc.
