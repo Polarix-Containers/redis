@@ -11,6 +11,7 @@
 
 ```
   redis:
+    container_name: redis
     image: ghcr.io/polarix-containers/redis:7
     restart: unless-stopped
     volumes:
