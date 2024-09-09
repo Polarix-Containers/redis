@@ -16,7 +16,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/redis
-  VERSION: 7
+  TAG: 7
 
 jobs:
   build:
@@ -52,14 +52,14 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ env.VERSION }}
+            ${{ env.TAG }}
             latest
 
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: ${{ env.VERSION }}
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
@@ -87,7 +87,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
-          category: trivy-${{ env.VERSION }}
+          category: trivy-${{ env.TAG }}
 
   grype:
     name: Scan current image with Grype
@@ -108,4 +108,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.grype.outputs.sarif }}
-          category: grype-${{ env.VERSION }}
+          category: grype-${{ env.TAG }}
