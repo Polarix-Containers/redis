@@ -1,4 +1,4 @@
-ARG VERSION=7
+ARG VERSION=6
 
 FROM redis:${VERSION}-alpine
 

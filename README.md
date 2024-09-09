@@ -1,6 +1,7 @@
 # Redis
 
-![Build, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build.yml/badge.svg)
+![Build 7, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build-7.yml/badge.svg)
+![Build 6, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build-6.yml/badge.svg)
 
 ### Features & usage
 - Built on the [Docker Community's Alpine-based image](https://github.com/redis/docker-library-redis), to be used as a drop-in replacement.
