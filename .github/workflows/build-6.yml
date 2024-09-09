@@ -16,7 +16,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/redis
-  TAG: latest
   VERSION: 6
 
 jobs:
@@ -53,7 +52,6 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ env.TAG }}
             ${{ env.VERSION }}
 
       - name: Build and push Docker image
