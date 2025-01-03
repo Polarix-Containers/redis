@@ -13,7 +13,8 @@ RUN apk -U upgrade \
     && apk add libstdc++ shadow \
     && rm /usr/local/bin/gosu
 
-RUN usermod -u ${UID} redis \
+RUN --network=none \
+    usermod -u ${UID} redis \
     && groupmod -g ${GID} redis \
     && find / -user 999 -exec chown -h redis {} \; \
     && find / -group 1000 -exec chgrp -h redis {} \; \
