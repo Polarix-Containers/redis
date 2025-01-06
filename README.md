@@ -7,7 +7,7 @@
 
 ### Features & usage
 - Built on the [Docker Community's Alpine-based image](https://github.com/redis/docker-library-redis), to be used as a drop-in replacement.
-- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID 3008.
+- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID 200009.
 - Removes unnecessary gosu SUID binary.
 
 ### Sample Docker Compose config
