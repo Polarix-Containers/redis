@@ -19,7 +19,7 @@
     restart: unless-stopped
     volumes:
       - ./redis:/data:Z
-    user: "3008:3008"
+    user: "200009:200009"
     read_only: true
     security_opt:
       - "no-new-privileges=true"
