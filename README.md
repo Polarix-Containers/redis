@@ -19,6 +19,10 @@
     restart: unless-stopped
     volumes:
       - ./redis:/data:Z
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 15s
+      timeout: 5s
     user: "200009:200009"
     read_only: true
     security_opt:
