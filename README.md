@@ -1,7 +1,6 @@
 # Redis
 
 ![Build 7, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build-7.yml/badge.svg)
-![Build 6, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build-6.yml/badge.svg)
 
 ⚠️ Due to Redis's licensing change, we highly recommend that you use our [Valkey](https://github.com/Polarix-Containers/valkey) container instead. Valkey is permissively licensed, is a drop in replacement for Redis, and will receive more attention and testing from us.
 
