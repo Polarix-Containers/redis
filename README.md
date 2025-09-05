@@ -2,7 +2,7 @@
 
 ![Build 7, scan & push](https://github.com/Polarix-Containers/redis/actions/workflows/build-7.yml/badge.svg)
 
-⚠️ Due to Redis's licensing change, we highly recommend that you use our [Valkey](https://github.com/Polarix-Containers/valkey) container instead. Valkey is permissively licensed, is a drop in replacement for Redis, and will receive more attention and testing from us.
+⚠️ Due to Redis's licensing change, we highly recommend that you use our [Valkey](https://github.com/Polarix-Containers/valkey) container instead. We will not build Redis 8 and this image will be removed once Redis 7 reaches EOL.
 
 ### Features & usage
 - Built on the [Docker Community's Alpine-based image](https://github.com/redis/docker-library-redis), to be used as a drop-in replacement.
