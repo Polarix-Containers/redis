@@ -10,8 +10,7 @@ ARG GID
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
 RUN apk -U upgrade \
-    && apk add libstdc++ shadow \
-    && rm /usr/local/bin/gosu
+    && apk add libstdc++ shadow
 
 RUN --network=none \
     usermod -u ${UID} redis \
